@@ -1,5 +1,7 @@
 {
   "name": "athosC-App",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
