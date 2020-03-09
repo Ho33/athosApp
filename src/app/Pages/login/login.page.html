@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
+  
 </ion-header>
 
-<ion-content>
-
+<ion-content >
+  <div class="divData">
+  <ion-item >
+  <ion-input class="data" type='email' [(ngModel)]="dataLog.email" placeholder="Usuario">
+    <ion-icon  name="person-circle-outline"></ion-icon>
+  </ion-input>
+</ion-item>
+<ion-item >
+  <ion-input [type]="showPassword ? 'text' : 'password'" class="data" class="data" type='password' [(ngModel)]="dataLog.password" placeholder="Contraseña">
+    <ion-icon  name="lock-closed-outline"></ion-icon>
+  </ion-input>
+  <ion-icon  name="eye" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+</ion-item>
+</div>
+<div class="itemButton">
+  <ion-button  expand="round" color="dark" fill="outline" (click)="logIn()">
+    <ion-icon slot="start" name="enter"></ion-icon>
+    ENTRAR</ion-button>
+  </div>
 </ion-content>
