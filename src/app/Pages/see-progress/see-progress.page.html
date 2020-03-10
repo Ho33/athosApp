@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>see-progress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let item of (getAllProgess() | async) ">
+    <ion-card>
+      {{item.date}}
+      {{item.height}}
+      {{item.weight}}
+    </ion-card>
+  </ion-item>
+
+</ion-content>
