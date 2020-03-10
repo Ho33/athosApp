@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./Pages/home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'see-progress',
+    loadChildren: () => import('./Pages/see-progress/see-progress.module').then( m => m.SeeProgressPageModule)
+  },
 
 ];
 
