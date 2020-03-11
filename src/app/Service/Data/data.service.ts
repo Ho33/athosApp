@@ -12,7 +12,6 @@ export class DataService {
 	private userId: string;
 	constructor(private fireSv: AngularFirestore, private authSv: AngularFireAuth) {
 		this.userId = this.authSv.auth.currentUser.uid;
-		console.log(this.userId);
 		this.progressCollection = this.fireSv.collection('users').doc(this.userId).collection('progress');
 	}
 
@@ -25,6 +24,7 @@ export class DataService {
 				return actions.map((a) => {
 					const data = a.payload.doc.data();
 					const id = a.payload.doc.id;
+					console.log(data);
 					return { id, ...data };
 				});
 			})
@@ -33,7 +33,7 @@ export class DataService {
 
 	getSeletedProgress(progressId: string) {
 		return this.progressCollection
-			.doc<IuserProgress>('progressId')
+			.doc<IuserProgress>(progressId)
 			.valueChanges()
 			.subscribe((data: IuserProgress) => {
 				return data;

@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let item of (getAllProgess() | async) ">
+  <ion-item *ngFor="let item of allProgress">
     <ion-card>
       {{item.date}}
       {{item.height}}
