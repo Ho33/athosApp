@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { IuserProgress } from './../../Interfaces/IuserProgress';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/Service/Data/data.service';
@@ -12,7 +13,7 @@ export class SeeProgressPage implements OnInit {
 	private allProgress: IuserProgress[];
 	private progressSubscription: Subscription;
 
-	constructor(private dataSv: DataService) {
+	constructor(private dataSv: DataService, private route: Router) {
 		this.progressSubscription = this.dataSv.getAllProgress().subscribe((data) => {
 			this.allProgress = data;
 		});
@@ -25,5 +26,8 @@ export class SeeProgressPage implements OnInit {
 		this.dataSv.getAllProgress().subscribe((data) => {
 			this.allProgress = data;
 		});
+	}
+	goAddProgress() {
+		this.route.navigateByUrl('/add-progress');
 	}
 }

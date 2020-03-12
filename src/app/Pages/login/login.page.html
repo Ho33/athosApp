@@ -10,7 +10,7 @@
   </ion-input>
 </ion-item>
 <ion-item >
-  <ion-input [type]="showPassword ? 'text' : 'password'" class="data" class="data" type='password' [(ngModel)]="dataLog.password" placeholder="Contraseña">
+  <ion-input [type]="showPassword ? 'text' : 'password'" class="data" type='password' [(ngModel)]="dataLog.password" placeholder="Contraseña">
     <ion-icon  name="lock-closed-outline"></ion-icon>
   </ion-input>
   <ion-icon  name="eye" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>

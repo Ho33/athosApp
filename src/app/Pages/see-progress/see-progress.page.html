@@ -1,15 +1,24 @@
 <ion-header>
+  
   <ion-toolbar>
-    <ion-title>see-progress</ion-title>
+    <ion-back-button slot="start" color="dark"></ion-back-button>
+    <ion-title>Tu seguimiento</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<ion-fab style="padding-top: 10px;" horizontal="end" vertical="top" slot="fixed">
+  <ion-fab-button (click)="goAddProgress()" color="dark">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 <ion-content>
   <ion-item *ngFor="let item of allProgress">
-    <ion-card>
-      {{item.date}}
-      {{item.height}}
-      {{item.weight}}
+    <ion-card style="width: 100%;">
+      <ion-card-header>
+        <ion-card-subtitle>{{item.date}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+       {{item.observations}}
+      </ion-card-content>
     </ion-card>
   </ion-item>
 

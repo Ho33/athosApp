@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
 
 	private async logIn() {
 		if (await this.AuthSv.logIn(this.dataLog)) {
-			this.route.navigateByUrl('/see-progress')// TODO route to userPage
+			this.route.navigateByUrl('/menu')// TODO route to userPage
 		}
 	}
 

@@ -18,6 +18,7 @@ export class DataService {
 	addProgress(progress: IuserProgress) {
 		return this.progressCollection.add(progress);
 	}
+	
 	getAllProgress() {
 		return this.progressCollection.snapshotChanges().pipe(
 			map((actions) => {

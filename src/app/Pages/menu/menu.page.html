@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <h1 style="font-size:1.4em;text-align: center;" no-margin>Bienvenido/a, Test</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style='text-align: center'>
+  <ion-grid class="grid">
+    <ion-row>
+      <ion-col col-6>
+        <ion-card class="card" (click)='goProgress()' text-center padding color="danger">
+          <ion-icon style="padding-top: 15px;" name="bar-chart-outline"></ion-icon>
+          <h2>Seguimiento</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card class="card" text-center padding color="danger">
+          <ion-icon class="icon-card" name="reader-outline"></ion-icon>
+          <h2>Rutinas</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card class="card" style="color:dark; fill:outline">
+          <ion-icon style="padding-top: 15px;" name="folder-open-outline"></ion-icon>
+          <h2>Dietas</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card class="card" text-center padding color="danger">
+          <ion-icon style="padding-top: 15px;" name="today-outline"></ion-icon>
+          <h2>Horario</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row
+    style="padding-left: 80px; padding-right: 80px;">
+      <ion-col col-6>
+        <ion-card class="card" text-center padding color="danger">
+          <ion-icon style="padding-top: 15px;" name="chatbox-ellipses-outline"></ion-icon>
+          <h2>Notificaciones</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" color="dark"></ion-back-button>
+    <ion-title>AÑADIR NUEVO PROGRESO</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<ion-item >
+  <ion-input  type='text' [(ngModel)]="progressToAdd.weight" placeholder="Peso">
+  </ion-input>
+</ion-item>
+<ion-item >
+  <ion-input  type='text' [(ngModel)]="progressToAdd.imgFront" placeholder="Imagen frontal">
+  </ion-input>
+</ion-item>
+<ion-item >
+  <ion-input type='text' [(ngModel)]="progressToAdd.imgBack" placeholder="Imagen atras">
+  </ion-input>
+</ion-item>
+<ion-item >
+  <ion-input  type='text' [(ngModel)]="progressToAdd.observations" placeholder="Observaciones">
+  </ion-input>
+</ion-item>
+
+<ion-button (click)="addProgress()">
+AGREGAR
+</ion-button>
+</ion-content>

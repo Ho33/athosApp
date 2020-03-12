@@ -18,7 +18,15 @@ const routes: Routes = [
   {
     path: 'see-progress',
     loadChildren: () => import('./Pages/see-progress/see-progress.module').then( m => m.SeeProgressPageModule)
+  },  {
+    path: 'menu',
+    loadChildren: () => import('./Pages/menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'add-progress',
+    loadChildren: () => import('./Pages/add-progress/add-progress.module').then( m => m.AddProgressPageModule)
+  },
+
 
 ];
 
